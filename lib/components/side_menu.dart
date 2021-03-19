@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:outlook/responsive.dart';
-import 'package:websafe_svg/websafe_svg.dart';
 
 import '../constants.dart';
-import '../extensions.dart';
 import 'side_menu_item.dart';
 import 'tags.dart';
 
@@ -28,7 +26,7 @@ class SideMenu extends StatelessWidget {
               Row(
                 children: [
                   Image.asset(
-                    "assets/images/Logo Outlook.png",
+                    "assets/images/app_icon.png",
                     width: 46,
                   ),
                   Spacer(),
@@ -36,43 +34,44 @@ class SideMenu extends StatelessWidget {
                   if (!Responsive.isDesktop(context)) CloseButton(),
                 ],
               ),
-              SizedBox(height: kDefaultPadding),
-              FlatButton.icon(
-                minWidth: double.infinity,
-                padding: EdgeInsets.symmetric(
-                  vertical: kDefaultPadding,
-                ),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                color: kPrimaryColor,
-                onPressed: () {},
-                icon: WebsafeSvg.asset("assets/Icons/Edit.svg", width: 16),
-                label: Text(
-                  "New message",
-                  style: TextStyle(color: Colors.white),
-                ),
-              ).addNeumorphism(
-                topShadowColor: Colors.white,
-                bottomShadowColor: Color(0xFF234395).withOpacity(0.2),
-              ),
-              SizedBox(height: kDefaultPadding),
-              FlatButton.icon(
-                minWidth: double.infinity,
-                padding: EdgeInsets.symmetric(
-                  vertical: kDefaultPadding,
-                ),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                color: kBgDarkColor,
-                onPressed: () {},
-                icon: WebsafeSvg.asset("assets/Icons/Download.svg", width: 16),
-                label: Text(
-                  "Get messages",
-                  style: TextStyle(color: kTextColor),
-                ),
-              ).addNeumorphism(),
+              // SizedBox(height: kDefaultPadding),
+              // FlatButton.icon(
+              //   minWidth: double.infinity,
+              //   padding: EdgeInsets.symmetric(
+              //     vertical: kDefaultPadding,
+              //   ),
+              //   shape: RoundedRectangleBorder(
+              //     borderRadius: BorderRadius.circular(10),
+              //   ),
+              //   color: kPrimaryColor,
+              //   onPressed: () {},
+              //   icon: WebsafeSvg.asset("assets/Icons/Edit.svg", width: 16),
+              //   label: Text(
+              //     "New message",
+              //     style: TextStyle(color: Colors.white),
+              //   ),
+              // ).addNeumorphism(
+              //   topShadowColor: Colors.white,
+              //   bottomShadowColor: Color(0xFF234395).withOpacity(0.2),
+              // ),
+              // SizedBox(height: kDefaultPadding),
+              // FlatButton.icon(
+              //   minWidth: double.infinity,
+              //   padding: EdgeInsets.symmetric(
+              //     vertical: kDefaultPadding,
+              //   ),
+              //   shape: RoundedRectangleBorder(
+              //     borderRadius: BorderRadius.circular(10),
+              //   ),
+              //   color: kBgDarkColor,
+              //   onPressed: () {},
+              //   icon: WebsafeSvg.asset("assets/Icons/Download.svg", width: 16),
+              //   label: Text(
+              //     "Get messages",
+              //     style: TextStyle(color: kTextColor),
+              //   ),
+              // ).addNeumorphism(),
+
               SizedBox(height: kDefaultPadding * 2),
               // Menu Items
               SideMenuItem(

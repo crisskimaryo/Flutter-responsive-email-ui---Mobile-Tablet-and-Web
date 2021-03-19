@@ -30,9 +30,17 @@ dependencies:
 
   # handle SVGs for Android, iOS, and Web.
   websafe_svg: ^1.1.4+1
+  flutter_tags:
 
   # which supports multiple columns with rows of varying sizes
   flutter_staggered_grid_view: ^0.3.3
+  dio:
+  # dio_http_cache:
+  flutter_riverpod: ^0.13.1
+  fluttertoast:
+  bot_toast:
+  oktoast:
+  material_design_icons_flutter:
 
 dev_dependencies:
   flutter_test:
@@ -54,6 +62,7 @@ flutter:
   assets:
     - assets/Icons/
     - assets/images/
+    
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:outlook/components/side_menu.dart';
 import 'package:outlook/responsive.dart';
-import 'package:outlook/screens/email/email_screen.dart';
-import 'components/list_of_emails.dart';
+import 'package:outlook/screens/main/components/status_monitor_screen.dart';
+import 'components/list_of_experts.dart';
 
 class MainScreen extends StatelessWidget {
   @override
@@ -12,16 +12,16 @@ class MainScreen extends StatelessWidget {
     return Scaffold(
       body: Responsive(
         // Let's work on our mobile part
-        mobile: ListOfEmails(),
+        mobile: ListOfExperts(),
         tablet: Row(
           children: [
             Expanded(
               flex: 6,
-              child: ListOfEmails(),
+              child: ListOfExperts(),
             ),
             Expanded(
               flex: 9,
-              child: EmailScreen(),
+              child: StatusMonitorScreen(),
             ),
           ],
         ),
@@ -29,17 +29,17 @@ class MainScreen extends StatelessWidget {
           children: [
             // Once our width is less then 1300 then it start showing errors
             // Now there is no error if our width is less then 1340
-            Expanded(
-              flex: _size.width > 1340 ? 2 : 4,
-              child: SideMenu(),
-            ),
+            // Expanded(
+            //   flex: _size.width > 1340 ? 2 : 4,
+            //   child: SideMenu(),
+            // ),
             Expanded(
               flex: _size.width > 1340 ? 3 : 5,
-              child: ListOfEmails(),
+              child: ListOfExperts(),
             ),
             Expanded(
               flex: _size.width > 1340 ? 8 : 10,
-              child: EmailScreen(),
+              child: StatusMonitorScreen(),
             ),
           ],
         ),
